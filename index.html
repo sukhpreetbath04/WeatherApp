@@ -42,6 +42,20 @@
     </div>
 
 </div>
+
+<script>
+
+const apiKey = "a095d133a7d8b501cd77504c5f5c817c";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=brampton";
+
+async function checkWeather(){
+    const response = await fetch(apiUrl + `&appid=${apiKey}`);
+    var data = await response.json();
+
+    console.log(data);
+}
+
+</script>
     
 </body>
 
